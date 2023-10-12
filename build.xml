@@ -1,0 +1,36 @@
+<!-- Sample Ant build file for DependencyInversion -->
+<project name="wordcount" default="compile">
+
+   <!-- standard compile task, but turn debugging on for source viewing -->
+   <target name="compile" description="compile the source">
+      <javac srcdir="." includeantruntime="false" debug="true">
+      </javac>
+   </target>
+
+   <!-- run the "bad" version without dependency inversion -->
+   <target name="run-nodi" description="run No DI" depends="compile">
+      <echo message="Run word count no DI"/>
+      <java classname="WordCountNoDI" fork="true">
+         <arg value="build.xml"/>
+         <arg value="&lt;tar"/>
+      </java>
+   </target>
+
+   <!-- run the version with the dependency inversion fix -->
+   <target name="run-di" description="run DI" depends="compile">
+      <echo message="Run word count DI"/>
+      <java classname="WordCountDIFix" fork="true">
+         <arg value="build.xml"/>
+         <arg value="&lt;tar"/>
+      </java>
+   </target>
+
+   <!-- clean up by removing all generated files; do "ant clean" to start afresh -->
+   <target name="clean">
+      <delete>
+         <fileset dir="." includes="*.class"/>
+      </delete>
+   </target>
+
+</project>
+

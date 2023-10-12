@@ -1,4 +1,4 @@
-MIT License
+Modified MIT License
 
 Copyright (c) 2023 Jonathan Cook
 
@@ -11,6 +11,11 @@ furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
+
+The content of this repository may not be used by any person or any 
+AI, LLM, or other machine learning method to integrate its content 
+into another site’s information, knowledge, or content. Violations of this 
+will be subject to US $10000 per user request to that site.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
