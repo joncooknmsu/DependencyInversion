@@ -22,7 +22,7 @@ public int countWords(String resource, String prefix)
     // Our code below is now at our own desired abstraction; because
     // this is a simple example, the abstract is not hugely different
     // from the Java library capability, but it still demonstrates the idea
-    if (source.open(resource) == false)
+    if (source.initialize(resource) == false)
         return -1;
     while (source.notDone()) {
         String word = source.nextWord();
@@ -43,7 +43,7 @@ public static void main(String args[])
     if (args.length == 2) {
         prefix = args[1];
     }
-    WordCountNoDI wordCounter = new WordCountNoDI();
+    WordCountDIFix wordCounter = new WordCountDIFix();
     wordCount = wordCounter.countWords(args[0], prefix);
     if (wordCount < 0)
         return;

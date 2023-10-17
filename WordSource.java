@@ -4,7 +4,7 @@
 // this abstraction rather than the raw Java Library classes.
 // 
 public interface WordSource {
-    public boolean open(String resource);
+    public boolean initialize(String resource);
     public boolean notDone();
     public String nextWord();
 }

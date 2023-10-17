@@ -13,7 +13,7 @@ public class WordSourceJavaLib implements WordSource
 
 private Scanner scanner;
 
-public boolean open(String resource)
+public boolean initialize(String resource)
 {
     try {
         scanner = new Scanner(new File(resource));
