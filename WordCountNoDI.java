@@ -34,6 +34,7 @@ public int countWords(String resource, String prefix)
         if (prefix == null || token.startsWith(prefix))
             words++;
     }
+    scanner.close();
     return words;
 }
 
